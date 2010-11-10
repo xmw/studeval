@@ -1,4 +1,5 @@
 #!/usr/bin/python2
+# -*- coding: utf-8 -*-
 
 import re
 
@@ -8,6 +9,7 @@ TOKENRE = re.compile('Login: ([^ ]*) \| Passwort: ([^ ]*)\n(.*) \n', re.M)
 class Token:
     def __init__(self, s):
 	self.login, self.password, self.url = TOKENRE.match(s).groups()
+	self.url = 'http://' + self.url
 
     def __str__(self):
 	return ' '.join((self.login, self.password, self.url))

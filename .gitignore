@@ -1,2 +1,5 @@
-studeval.tokens
+*.pyc
 .*.swp
+email-*
+mail/*
+tokens

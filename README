@@ -1,0 +1,13 @@
+
+Tokens tesweise parsen mit
+	./tokens.py
+
+Emails generieren mit 
+	./generate.py -a email-gaf-intern -t tokens -s 19800 -m mail 
+
+Emails lesen mit
+	mutt -f ./mail
+
+
+Emails senden mit
+	./send.py -m mail -i <wieviele>
