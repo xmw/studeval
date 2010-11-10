@@ -8,9 +8,9 @@ import email.mime.text, email.parser
 parser = optparse.OptionParser()
 parser.add_option('-s', '--server', dest='host', default='huygens.fs.lmu.de',
     help='smtp relay server hostname', metavar='STRING')
-parser.add_option('-p', '--port', dest='port', default='25',
+parser.add_option('-p', '--port', dest='port', default='465',
     help='smtp relay port', 	metavar='STRING')
-parser.add_option('-t', '--type', dest='type', default='plain',
+parser.add_option('-t', '--type', dest='type', default='ssl',
     help='smtp connection type', metavar='plain|ssl|tls')
 parser.add_option('-U', '--username', dest='username', default='webermi',
     help='optional smtp username', metavar='STRING')
