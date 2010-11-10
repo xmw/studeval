@@ -3,7 +3,7 @@
 
 import re
 
-TOKENFILE = 'studeval.tokens'
+TOKENFILE = 'tokens'
 TOKENRE = re.compile('Login: ([^ ]*) \| Passwort: ([^ ]*)\n(.*) \n', re.M)
 
 class Token:
@@ -22,4 +22,5 @@ def parse(fn = TOKENFILE):
     return map(Token, raw)
 
 if __name__ == '__main__':
-    print map(str, parse())
+    for token in parse():
+	print token

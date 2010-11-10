@@ -1,13 +1,15 @@
 
 Tokens tesweise parsen mit
-	./tokens.py
+	./token.py
 
 Emails generieren mit 
-	./generate.py -a email-gaf-intern -t tokens -s 19800 -m mail 
+	./generate.py -a email-pretest [-t tokens] -s 19802 [-m mail]
 
-Emails lesen mit
+Emails checken/lesen mit
 	mutt -f ./mail
 
-
 Emails senden mit
-	./send.py -m mail -i <wieviele>
+	./send.py [-s huygens] [-p 465] [-t ssl] [-U webermi [-P xxx]] [-m mail]
+
+Hilfe jeweils mit "./token.py -h", "./generate.py -h" und "./send.py"
+
