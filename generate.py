@@ -4,25 +4,18 @@
 import email.header, email.mime.text
 import optparse, sys, time
 
-SUBJECT="""Pretest: Evaluierung der Studienbeiträge im Wintersemester 2010/2011 an der Fakultät 16"""
+SUBJECT="""Studienbeitragssitzung/Evaluationsumfage an der Fakultät 16"""
 BODY="""
-=====================
-PRETEST
+Sehr geehrte Mitglieder der Studienbeitragskommission,
 
-Dies ist ein Testlauf für die kommende Befragung. 
-Bitte nimm dir kurz Zeit den Fragebogen anzuschauen und ggf. auftretende Probleme zu melden.
-Bitte bereichere Deine Rückmeldung an studeval-pretest@fs.lmu.de um folgende Daten
+im Rahmen der Evaluation (TOP 10 Sitzung vom 6.12.2010) haben wir nun den 
+Fragebogen fertig und möchten ihn zur Kenntnisnahme vorlegen. 
+Dabei erhalten sie unten denselben Text wie er für das spätere Mailing
+vorgesehen ist mit einem persönlichen Passwort.
 
-Name/Email:
-
-Betriebssystem:
-
-Browser/Version:
-
-Fehler:
-
-Beahte bitte, dass deine Angaben -- aufgrund der kleinen Testgruppe -- im Gegensatz zur 
-endgültigen Umfrage nicht anonym sind.
+Ich bitte Sie, sich damit vertraut zu machen und etwaige Kritikpunkte auch
+an studeval@fs.lmu.de zu schicken um diese Umfrage in der Sitzung vom 6.12.
+auf den Weg zu bringen.
 
 i.A. Michael Weber
 
@@ -32,27 +25,32 @@ Kommission zur Evaluierung der Studiengebühren an der Fak16
 
 =====================
 
-Liebe Studentin, lieber Student,
+Liebe Studierende,
 
-wir, die Kommission zur Evaluierung der Studienbeiträge an der Fakultät 16 - bestenend
-aus Studenten und Lehrenden, möchten wissen was Du über die Verwendung deiner Beiträge denkst.
 
-Wir bitten dich daher auf der Seite %s deine Meinung auszudrücken. 
-Verende dabei den Benutzernamen %s und das Passwort %s.
+inzwischen werden seit fünf Jahren Studienbeiträge erhoben. Seitdem versuchen 
+Studierende und Lehrende gemeinsam die Mittel in eurem Sinn einzusetzen. 
+Um die Situation weiterhin zu verbessern sind wir auf deine Rückmeldung 
+angewiesen und bitten dich bis zum 10. Jannuar 2010 an unserer Umfrage 
+unter %s teilzunehmen.
 
-Die erhebung der Daten erfolgt anonymisiert.
+Es gibt zunächst einige allgemeine Fragen, dann spezifische Fragen zu den einzelnen
+Instituten Mathe, Informatik und Statistik. Wir bitten dich Angaben zu dem Institut
+zu machen, an welchem du dein Hauptfach studierst (z.B. Bioinformatik -> Institut für Informatik).
+Verwende dabei den Benutzernamen %s und das Passwort %s.
 
-Vielen Dank für die Teilnahme
+Die Erhebung der Daten erfolgt anonymisiert. 
 
-i. A. Michael Weber
+Sollte aufgrund kleiner Bildschirmgröße ein Scrollen von links nach rechts auftauchen, 
+verkleinere die Anzeige (in den meisten Fällen über die Tastenkombination strg & -).
 
---
+Vielen Dank für die Teilnahme!
 
-Kommission zur Evaluierung der Studiengebühren an der Fak16
-email: studeval@fs.lmu.de
+Prof. Heinrich Hussmann,
+Dekan der Fakultät für Mathematik, Informatik und Statistik
 
 """
-FROM=email.utils.formataddr(('Studeval Pretest', 'studeval-pretest@fs.lmu.de'))
+FROM=email.utils.formataddr(('Fakultät für Mathematik, Informatik und Statistik', 'studeval@fs.lmu.de'))
 DATE=email.utils.formatdate(time.time(), True, True)
 
 def generate(rcpt, token):
