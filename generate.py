@@ -27,7 +27,6 @@ Kommission zur Evaluierung der Studiengebühren an der Fak16
 
 Liebe Studierende,
 
-
 inzwischen werden seit fünf Jahren Studienbeiträge erhoben. Seitdem versuchen 
 Studierende und Lehrende gemeinsam die Mittel in eurem Sinn einzusetzen. 
 Um die Situation weiterhin zu verbessern sind wir auf deine Rückmeldung 
@@ -50,7 +49,9 @@ Prof. Heinrich Hussmann,
 Dekan der Fakultät für Mathematik, Informatik und Statistik
 
 """
-FROM=email.utils.formataddr(('Fakultät für Mathematik, Informatik und Statistik', 'studeval@fs.lmu.de'))
+FROM=email.utils.formataddr((
+	str(email.header.Header('Fakultät für Mathematik, Informatik und Statistik', 'utf-8')),
+	 'studeval@fs.lmu.de'))
 DATE=email.utils.formatdate(time.time(), True, True)
 
 def generate(rcpt, token):
